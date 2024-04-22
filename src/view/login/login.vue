@@ -3,9 +3,7 @@
 </script>
 
 <template>
-  <div class="app">
-    <router-view/>
-  </div>
+<div>登录</div>
 </template>
 
 <style scoped>
