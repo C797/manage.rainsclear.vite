@@ -4,6 +4,7 @@ import pinia from "@/stores";
 import router from './routers'
 import App from './App.vue'
 
+import ElementPlus from "element-plus";
 import * as Icons from "@element-plus/icons-vue";
 
 const app = createApp(App);
@@ -15,4 +16,5 @@ Object.keys(Icons).forEach(key => {
 
 app.use(pinia);
 app.use(router);
+app.use(ElementPlus);
 app.mount('#app');

@@ -32,12 +32,14 @@
 </div>
 </template>
 
-<script setup lang="ts" name="login">
+<script setup lang="ts" name="Login">
 import { ref, reactive, onMounted } from "vue";
 import { Login } from "@/api/interface";
 import { CircleClose, UserFilled } from "@element-plus/icons-vue";
 import type { ElForm } from "element-plus";
+import { useRouter } from "vue-router";
 
+const router = useRouter();
 type FormInstance = InstanceType<typeof ElForm>;
 const loginFormRef = ref<FormInstance>();
 
@@ -55,6 +57,7 @@ const loginForm = reactive<Login.ReqLoginForm>({
 
 const login = (formEl: FormInstance | undefined) => {
   if (!formEl) return;
+  router.push("/layout");
 }
 const resetForm = (formEl: FormInstance | undefined) => {
   if (!formEl) return;
